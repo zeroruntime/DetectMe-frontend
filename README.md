@@ -48,7 +48,7 @@ plant-disease-detector/
 ### 1️⃣ Clone the Repository  
 ```bash
 git clone https://github.com/zeroruntime/DetectMe-frontend.git
-cd plant-disease-detector
+cd DetectMe-frontend
 ```
 
 ### 2️⃣ Install Dependencies  
