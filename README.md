@@ -1,50 +1,129 @@
-# Welcome to your Expo app 👋
+# 🌿 Plant Disease Detector - React Native App  
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This is a **React Native mobile app** built with **Expo** that allows users to capture or upload plant images and detect potential diseases using a Flask-based AI model. 🚀  
 
-## Get started
+---
 
-1. Install dependencies
+## 📌 Features  
+✅ **Camera Integration** – Capture plant images directly  
+✅ **Gallery Upload** – Select images from the device  
+✅ **AI Disease Detection** – Sends images to the Flask API for predictions  
+✅ **Clean UI** – User-friendly interface with smooth navigation  
+✅ **Multi-Screen Navigation** – Organized structure using **Expo Router**  
 
-   ```bash
-   npm install
-   ```
+---
 
-2. Start the app
-
-   ```bash
-    npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+## 📂 Project Structure  
+```
+plant-disease-detector/
+├── app/                # Main screens
+│   ├── index.js        # Home screen
+│   ├── _layout.js      # Layout wrapper for navigation
+│   ├── camera.js       # Camera functionality
+│   ├── results.js      # Displays prediction results
+│   └── about.js        # About page
+├── components/         # Reusable UI components
+│   ├── Button.js       
+│   ├── DiseaseCard.js  
+│   ├── Header.js       
+│   └── LoadingOverlay.js  
+├── services/           # API communication
+│   └── api.js          
+├── constants/          # UI constants (Colors, Layout)
+│   ├── Colors.js       
+│   └── Layout.js       
+├── assets/             # Static assets (images, fonts)
+│   ├── images/         
+│   └── fonts/          
+├── app.json            # Expo configuration  
+├── babel.config.js     # Babel settings  
+├── package.json        # Dependencies & scripts  
+└── README.md           # Documentation  
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+## 🔧 Installation & Setup  
 
-To learn more about developing your project with Expo, look at the following resources:
+### 1️⃣ Clone the Repository  
+```bash
+git clone https://github.com/zeroruntime/DetectMe-frontend.git
+cd plant-disease-detector
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### 2️⃣ Install Dependencies  
+Make sure you have **Node.js** and **Expo CLI** installed.  
+```bash
+npm install
+```
 
-## Join the community
+### 3️⃣ Start the App  
+For **Android**:  
+```bash
+npm run android
+```
+For **iOS** (Mac only):  
+```bash
+npm run ios
+```
+For **Web Preview**:  
+```bash
+npm run web
+```
 
-Join our community of developers creating universal apps.
+For **Expo**:  
+```bash
+npx expo start
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+---
+
+## 📡 API Integration  
+The app communicates with the **Flask backend** for disease detection.  
+Modify `services/api.js` to match your backend URL:  
+```js
+import axios from 'axios';
+
+const API_URL = 'http://your-backend-ip:5000';
+
+```
+
+---
+
+## 📜 Dependencies  
+📌 Key libraries used in this project:  
+- `expo-camera` – Capture images  
+- `expo-image-picker` – Upload from gallery  
+- `axios` – API requests  
+- `react-navigation` – Multi-screen navigation  
+
+Install missing dependencies with:  
+```bash
+npm install
+```
+
+---
+
+## 📸 Screens  
+1️⃣ **Home Screen** – Welcome screen with buttons to capture or upload images  
+2️⃣ **Camera Screen** – Uses device camera to take pictures  
+3️⃣ **Results Screen** – Displays disease predictions and confidence score  
+
+---
+
+## 🔗 Future Enhancements  
+✅ Improve UI/UX with better styling  
+✅ Support more plant diseases  
+✅ Offline prediction using on-device TensorFlow  
+
+---
+
+## 🤝 Contributing  
+Feel free to fork, create issues, or submit PRs! 🎉  
+
+---
+
+## 🏷 License  
+MIT License © 2025 DetectMe Team  
+
+---
